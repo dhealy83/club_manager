@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
+  devise_for :users
+  get 'pages/home'
+  get 'pages/members'
+  get 'pages/leagues'
+  get 'pages/tournaments'
+  get 'pages/bag_tags'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
-  # root "articles#index"
+  root 'pages#home'
 end
