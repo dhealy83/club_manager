@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+<div class="d-flex justify-content-evenly">
+<div>
+  <h1>Home posts</h1>
+
+  <div id="home_posts">
+    <% @home_posts.each do |home_post| %>
+      <%= render home_post %>
+      <p>
+        <%= link_to "Show this home post", home_post %>
+      </p>
+    <% end %>
+  </div>
+
+  <%= link_to "New home post", new_home_post_path %>
+</div>
+</div>

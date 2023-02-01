@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'pages/home'
+  resources :home_posts
   get 'pages/members'
   get 'pages/leagues'
   get 'pages/tournaments'
@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   
   # Defines the root path route ("/")
-  root 'pages#home'
+  root 'home_posts#index'
 
   devise_for :users
 end
