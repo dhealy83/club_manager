@@ -1,11 +1,11 @@
-<nav class="navbar navbar-dark bg-dark fixed-bottom">
+<nav class="navbar navbar-dark bg-dark fixed-bottom ">
   <div class="container-fluid d-flex justify-content-evenly">
     <div>
     <span class="navbar-brand m-0">Welcome to the Club Manager</span>
     </div>
     <div>
     <% if current_user %>
-      <p class="navbar-brand m-0 "><%= current_user.role.capitalize %> - <%= current_user.email %></p>
+      <p class="navbar-brand m-0 "><%= current_user.role.capitalize %> - <%= current_user.username %></p>
     <% else %>
       <p class="navbar-brand m-0">You are not logged in</p>
     <% end %>

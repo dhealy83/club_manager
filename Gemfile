@@ -74,6 +74,9 @@ group :test do
   gem "webdrivers"
 end
 
+# Custom gems
 gem "devise", "~> 4.8"
 gem "mysql2", "~> 0.5.3"
 gem "yaml_db"
+gem "rails_admin"
+gem "sassc-rails"
