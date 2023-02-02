@@ -7,8 +7,9 @@
     <%= home_post.description %>
   </p>
 
+  <div class="d-flex justify-content-center">
   <% home_post.images.each do |image| %>
     <%= image_tag(image, style: "object-fit: contains; width: 95%; height: auto") %> 
   <% end %>
-
+  </div>
 </div>

@@ -1,0 +1,33 @@
+<div id="<%= dom_id league %>" class="m-2">
+  <div>
+    <strong>Title:</strong>
+    <%= league.title %>
+  </div>
+
+  <div>
+    <strong>Day:</strong>
+    <%= league.day %>
+  </div>
+
+  <div>
+    <strong>Time:</strong>
+    <%= league.time %>
+  </div>
+
+  <div>
+    <strong>Location:</strong>
+    <%= league.location %>
+  </div>
+
+  <div>
+    <strong>Description:</strong>
+    <%= league.description %>
+  </div>
+
+  <div class="d-flex justify-content-center m-0">
+    <% league.images.each do |image| %>
+      <%= image_tag(image, style: "object-fit: contains; width: 95%; height: auto")%>
+    <% end %>
+  </div>
+
+</div>

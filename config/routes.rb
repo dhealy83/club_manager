@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :leagues
   devise_for :users, controllers: {
         sessions: 'users/sessions'
       }
@@ -10,7 +11,7 @@ Rails.application.routes.draw do
   resources :home_posts
   get 'home_posts/index'
   get 'pages/members'
-  get 'pages/leagues'
+  get 'league/index'
   get 'pages/tournaments'
   get 'pages/bag_tags'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
