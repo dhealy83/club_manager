@@ -65,6 +65,6 @@ class HomePostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def home_post_params
-      params.require(:home_post).permit(:title, :description)
+      params.require(:home_post).permit(:title, :description, images: [])
     end
 end

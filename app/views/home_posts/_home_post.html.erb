@@ -1,12 +1,14 @@
 <div id="<%= dom_id home_post %>">
   <p>
-    <strong>Title:</strong>
     <%= home_post.title %>
   </p>
 
   <p>
-    <strong>Description:</strong>
     <%= home_post.description %>
   </p>
+
+  <% home_post.images.each do |image| %>
+    <%= image_tag(image, style: "object-fit: contains; width: 95%; height: auto") %> 
+  <% end %>
 
 </div>
