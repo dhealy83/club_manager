@@ -1,15 +1,15 @@
 <p style="color: green"><%= notice %></p>
 <% if user_signed_in? %>
-  <%= link_to "New league", new_league_path if current_user.moderator? %>
+  <%= link_to "New league", new_league_path if current_user.moderator? || current_user.admin? %>
 <% end %>
 <h1>Leagues</h1>
 
-<div id="leagues" style="margin-bottom: 100px">
+<div id="leagues" style="margin-bottom: 125px">
   <% @leagues.each do |league| %>
     <%= render league %>
       <% if user_signed_in? %>
         <p>
-          <%= link_to "Show this league", league if current_user.moderator? %>
+          <%= link_to "Show this league", league if current_user.moderator? || current_user.admin? %>
           
         </p>
       <% end%>

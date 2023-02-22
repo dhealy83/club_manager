@@ -1,5 +1,5 @@
 class UserController < ApplicationController
-  def member_number:integer
+  def member_number;integer
   end
 
   def first_name
@@ -20,7 +20,7 @@ class UserController < ApplicationController
   def state
   end
 
-  def zip_code:integer
+  def zip_code;integer
   end
 
   def phone_number
