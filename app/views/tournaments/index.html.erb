@@ -1,14 +1,20 @@
 <p style="color: green"><%= notice %></p>
 
+<% if user_signed_in? %>
+  <%= link_to "New tournament", new_tournament_path if current_user.moderator? || current_user.admin? %>
+<% end %>
+
 <h1>Tournaments</h1>
 
-<div id="tournaments">
+<div id="tournaments" style="margin-bottom: 125px">
   <% @tournaments.each do |tournament| %>
     <%= render tournament %>
-    <p>
-      <%= link_to "Show this tournament", tournament %>
-    </p>
+    <% if user_signed_in? %>
+      <p>
+        <%= link_to "Show this tournament", tournament if current_user.moderator? || current_user.admin? %>
+      </p>
+    <% end %>
   <% end %>
 </div>
 
-<%= link_to "New tournament", new_tournament_path %>
+
