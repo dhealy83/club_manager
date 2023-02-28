@@ -1,6 +1,8 @@
 <div class="d-flex justify-content-evenly">
   <div>
-
+  <% if user_signed_in? %>
+  <%= link_to "New home post", new_home_post_path if current_user.moderator? || current_user.admin? %>
+<% end %>
 
     <div id="home_posts" class="mb-5">
       <% @home_posts.each do |home_post| %>

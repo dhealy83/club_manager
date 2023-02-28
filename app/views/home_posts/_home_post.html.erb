@@ -1,4 +1,8 @@
+<p style="color: green"><%= notice %></p>
 <div id="<%= dom_id home_post %>" class="m-2">
+
+
+
   <p>
     <%= home_post.title %>
   </p>
@@ -12,4 +16,9 @@
     <%= image_tag(image, style: "object-fit: contains; width: 95%; height: auto") %> 
   <% end %>
   </div>
+          <% if user_signed_in? %>
+        <p>
+          <%= link_to "Show this home post", home_post if current_user.moderator? || current_user.admin? %>
+        </p>
+      <% end%>
 </div>
